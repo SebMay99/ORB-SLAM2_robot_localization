@@ -5,6 +5,7 @@ The paper "A Generalized Extended Kalman Filter Implementation for the Robot Ope
 (1) Moore, Thomas & Stouch, Daniel. (2016). A Generalized Extended Kalman Filter Implementation for the Robot Operating System. 302. 335-348. 10.1007/978-3-319-08338-4_25.
 
 This implementation fuses the pose from monocular ORB-SLAM 2 to which a covariance matrix is added, and the odometry readings from an IMU sensor. The camera stream and the IMU readings are set to be obtained from a Parrot Bebop 2 drone.
+-Ubuntu 16.04 and ROS Kinetic tested.
 
 ## 1. Source code
 ### - Prerequisites:
