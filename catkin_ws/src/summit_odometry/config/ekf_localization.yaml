@@ -11,7 +11,7 @@ base_link_frame: base_link
 world_frame: odom
 map_frame: map
 
-pose0: /orb_slam2_mono/pose
+pose0: /processed_pose
 
 pose0_config: [true,  true,  true,      # Position
                true,  true,  true,    # Orientation
