@@ -25,12 +25,15 @@ git clone https://github.com/SebMay99/ORB-SLAM2_robot_localization
 cd ORB-SLAM2_robot_localization/catkin_ws/
 catkin_make
 ````
-
 ## 2. How to run
 ### 1. Launch Bebop Autonomy driver
 Connect to the drone
 ````
 roslaunch bebop_driver bebop_node.launch
+````
+You can read the IMU sensor readings in a new terminal as an Odometry message:
+````
+rostopic echo /bebop/odom
 ````
 ### 2. Run ORB-SLAM2
 Note that the monocular node subscribes to a topic `/camera/image_raw` to run node ORB_SLAM2/Mono. So you need to relay to your camera topic
@@ -47,6 +50,9 @@ cd ~/orb_slam_2_ros/orb_slam2/config/[your_calibration_file].yaml
 ````
 ### 3. Add the covariance matrix to the ORB-SLAM 2 pose
 Run `covariance_matrix_pose.py` to modifiy the SLAM pose by adding a covariance matrix. The new pose will be published in the `processed_pose` topic.
+````
+python covariance_matrix_pose.py
+````
 
 ### 4. Run the EKF
 Launch the EKF node, the parameters can be adjusted in the `ekf_localization.yaml` file.
