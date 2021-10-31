@@ -73,7 +73,7 @@ You can read the filtered pose in a new terminal:
 rostopic echo odometry/filtered
 ````
 
-### 5. TF tree
+### 5. (*Optional*) TF tree
 Check the published TF tree:
 ````
 rosrun tf view_frames
