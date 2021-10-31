@@ -18,11 +18,11 @@ sudo apt-get install ros-kinetic-robot-localization
 ````
 [2] Clone this repository first:
 ````
-git clone https://github.com/SebMay99/modified_stability_scale_estimation
+git clone https://github.com/SebMay99/ORB-SLAM2_robot_localization
 ````
 [3] Build:
 ````
-cd modified_stability_scale_estimation/catkin_ws
+cd ORB-SLAM2_robot_localization/catkin_ws/
 catkin_make
 ````
 
