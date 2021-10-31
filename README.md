@@ -15,6 +15,10 @@ This implementation fuses the pose from monocular ORB-SLAM 2 to which a covarian
 
 [3] ORB-SLAM2 ROS node from https://github.com/appliedAI-Initiative/orb_slam_2_ros. Please follow the build instructions there
 
+[4] (*Optional*) TF package to vizualize the registered frames
+````
+sudo apt install ros-kinetic-tf
+````
 ### - How to build (Ubuntu 16.04, ROS Kinetic):
 [1] Install robot_localization package:
 ````
@@ -67,4 +71,14 @@ roslaunch summit_odometry start_filter.launch
 You can read the filtered pose in a new terminal:
 ````
 rostopic echo odometry/filtered
+````
+
+### 5. TF tree
+Check the published TF tree:
+````
+rosrun tf view_frames
+````
+If necessary the transformation between map -> odom can be created, for the Bebop 2 drone both the map and odom frame share their origin.
+````
+rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 100
 ````
