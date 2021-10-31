@@ -1,6 +1,10 @@
 # ORB-SLAM 2 robot_localization
 
-"A Generalized Extended Kalman Filter Implementation for the Robot Operating System" paper available at: http://docs.ros.org/en/melodic/api/robot_localization/html/_downloads/robot_localization_ias13_revised.pdf 
+The paper "A Generalized Extended Kalman Filter Implementation for the Robot Operating System" (1) from which the implementation is based can be found in: http://docs.ros.org/en/melodic/api/robot_localization/html/_downloads/robot_localization_ias13_revised.pdf 
+
+(1) Moore, Thomas & Stouch, Daniel. (2016). A Generalized Extended Kalman Filter Implementation for the Robot Operating System. 302. 335-348. 10.1007/978-3-319-08338-4_25.
+
+This implementation fuses the pose from monocular ORB-SLAM 2 to which a covariance matrix is added, and the odometry readings from an IMU sensor. The camera stream and the IMU readings are set to be obtained from a Parrot Bebop 2 drone.
 
 ## 1. Source code
 ### - Prerequisites:
