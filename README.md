@@ -79,7 +79,7 @@ Check the published TF tree:
 ````
 rosrun tf view_frames
 ````
-If necessary the transformation between map -> odom can be created, for the Bebop 2 drone both the map and odom frame share their origin.
+If necessary, the transformation between map -> odom can be created, for the Bebop 2 drone both the map and odom frame share their origin.
 ````
 rosrun tf static_transform_publisher 0 0 0 0 0 0 map odom 100
 ````
